@@ -1,0 +1,13 @@
+core-ui/node_modules
+core-ui/dist
+core-ui/.vscode
+core-ui/.idea
+core-ui/.DS_Store
+
+
+
+server/node_modules
+server/dist
+server/.vscode
+server/.idea
+server/.DS_Store
