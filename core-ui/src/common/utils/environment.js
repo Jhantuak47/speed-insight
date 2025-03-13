@@ -1,10 +1,13 @@
+import { appConfig } from "../../configs";
+
 const hostName = window.location.hostname;
-const jsonWrapperUrl = "https://jsonplaceholder.typicode.com";
-const apiUrl = "http://localhost:3233";
+const APP_URL = appConfig.APP.APP_URL || ""
+const APP_PORT = appConfig.APP.PORT || 3333;
+const appUrl = APP_URL + ":" + APP_PORT;
+
 export const ENV_URL =
     hostName === "localhost"
-        ? apiUrl
-        : jsonWrapperUrl;
-// export const ENV_URL = jsonWrapperUrl;
+        ? `http://localhost:${APP_PORT}`
+        : appUrl;
 
-export const API_PREFIX = hostName === "localhost" ? "" : "/api";
+export const API_PREFIX = "";
